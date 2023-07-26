@@ -65,6 +65,9 @@ public class QuestionController {
             Attempt attempt = memo.getAttemptInstance(teamsDto.getTeamName()).getAttempt();
             attempt.finishCurrentTask();
             attemptService.saveAttempt(attempt);
+            return true;
+        }else{
+            return false;
         }
     }
 }
